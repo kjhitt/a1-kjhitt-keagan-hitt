@@ -43,6 +43,7 @@
         .attr("transform", `translate(${marginLeft},0)`)
         .call(d3.axisLeft(y));
 
+    //functions to make it so that shapes move when hovered over
     var mouseover = function(d) {
       d3.select(this)
         .classed("moving", true)
@@ -58,8 +59,8 @@
         .attr("cx", 90)
         .attr("cy", 120)
         .attr("r", 20)
-        .attr("fill", "blue")
-        .attr("stroke", "black")
+        .attr("fill", "#7EFFC0")
+        .attr("stroke", "#3e8060") //same color, just darkened
         .attr("stroke-dasharray", "4 2")
         .attr("stroke-width", 2)
         .on("mouseover", mouseover)
@@ -68,10 +69,10 @@
     //rectangle element!
     svg.append("rect")
         .attr("x", 160)
-        .attr("y", marginTop)
+        .attr("y", marginTop + 10)
         .attr("width", 70)
         .attr("height", 20)
-        .attr("fill", "red")
+        .attr("fill", "#FFA37D")
         .on("mouseover", mouseover)
         .on("mouseout", mouseout);
 
@@ -81,7 +82,7 @@
         .attr("y1", 220)
         .attr("x2", 330)
         .attr("y2", 240)
-        .attr("stroke", "green")
+        .attr("stroke", "#678074")
         .attr("stroke-width", 4)
         .on("mouseover", mouseover)
         .on("mouseout", mouseout);
@@ -89,7 +90,7 @@
     //polygon element!
     svg.append("polygon")
         .attr("points", "500,150 550,100 575,150 550,200 525,180")
-        .attr("fill", "yellow")
+        .attr("fill", "#806E67")
         .on("mouseover", mouseover)
         .on("mouseout", mouseout);
 

@@ -16,6 +16,6 @@ Technical Achievements
 
 Design Achievements
 ---
-- Utilized a color palette from Adobe's color palette tool and applied it to the website.
-![Color Palette](color palette.png)
-- Applied .css rules to the project
+- Utilized a color palette from Adobe's color palette tool to create appealing visuals and applied it to the website.
+|[Color Palette](color%20palette.png)
+- Applied .css rules to the project (should like actually do this maybe somehow? font for axes???)
