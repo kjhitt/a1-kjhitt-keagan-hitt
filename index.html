@@ -3,17 +3,98 @@
 <head>
   <meta charset="utf-8">
   <title>A1: Hello World, GitHub and d3</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <div id="container"></div>
   <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
   <script>
     console.log("d3 version", d3.version); // test that d3 loaded
-    // Add an SVG
-    // Add Rectangles
-    // Add Circles
-    // Add Lines
-    // Add Polygons
+    // Declare the chart dimensions and margins.
+    const width = 640;
+    const height = 400;
+    const marginTop = 20;
+    const marginRight = 20;
+    const marginBottom = 30;
+    const marginLeft = 40;
+
+    // Declare the x (horizontal position) scale.
+    const x = d3.scaleUtc()
+        .domain([marginLeft, width - marginRight])
+        .range([marginLeft, width - marginRight]);
+
+    // Declare the y (vertical position) scale.
+    const y = d3.scaleLinear()
+        .domain([height - marginBottom, marginTop])
+        .range([height - marginBottom, marginTop]);
+
+    // Create the SVG container.
+    const svg = d3.create("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    // Add the x-axis.
+    svg.append("g")
+        .attr("transform", `translate(0,${height - marginBottom})`)
+        .call(d3.axisBottom(x));
+
+    // Add the y-axis.
+    svg.append("g")
+        .attr("transform", `translate(${marginLeft},0)`)
+        .call(d3.axisLeft(y));
+
+    var mouseover = function(d) {
+      d3.select(this)
+        .classed("moving", true)
+    }
+
+    var mouseout = function(d) {
+      d3.select(this)
+        .classed("moving", false)
+    }
+
+    //circle element!
+    svg.append("circle")
+        .attr("cx", 90)
+        .attr("cy", 120)
+        .attr("r", 20)
+        .attr("fill", "blue")
+        .attr("stroke", "black")
+        .attr("stroke-dasharray", "4 2")
+        .attr("stroke-width", 2)
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout);
+
+    //rectangle element!
+    svg.append("rect")
+        .attr("x", 160)
+        .attr("y", marginTop)
+        .attr("width", 70)
+        .attr("height", 20)
+        .attr("fill", "red")
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout);
+
+    //line element!
+    svg.append("line")
+        .attr("x1", 300)
+        .attr("y1", 220)
+        .attr("x2", 330)
+        .attr("y2", 240)
+        .attr("stroke", "green")
+        .attr("stroke-width", 4)
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout);
+
+    //polygon element!
+    svg.append("polygon")
+        .attr("points", "500,150 550,100 575,150 550,200 525,180")
+        .attr("fill", "yellow")
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout);
+
+    // Append the SVG element.
+    container.append(svg.node());
   </script>
 </body>
 </html>
