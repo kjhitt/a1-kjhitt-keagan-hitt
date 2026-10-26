@@ -2,7 +2,7 @@ Assignment 1 - Hello World: GitHub and d3
 ===
 Link to GitHub Pages: https://kjhitt.github.io/a1-kjhitt-keagan-hitt/
 
-This assignment takes a basic d3 example graph and adds the four required objects onto it, each using different colors. There is also some interactivity with it, as the objects rotate when hovered and get physics when clicked. There's also a fun little smiley face to the right of the graph. The graph area is intented as more of a technical showcase, whereas the area to the right is intended just as a drawing, although you can mess up the drawing by clicking on it a bunch.
+This assignment takes a basic d3 example graph and adds the four required objects onto it, each using different colors. There is also some interactivity with it, as the objects rotate when hovered and get physics when clicked. There's also a fun little smiley face to the right of the graph. The graph area is intended as more of a technical showcase, whereas the area to the right is intended just as a drawing, although you can mess up the drawing by clicking on it a bunch.
 
 Graph area:
 ![Graph Area](graph.png)
