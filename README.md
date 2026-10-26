@@ -23,7 +23,8 @@ Technical Achievements
 ---
 - Made it so that when an object is hovered, it rotates.
 - Once an object is clicked, "gravity" affects it. Can be undone by clicking again. 
-- Both technical achievements were completed with classes and JavaScript animations.
+ - Both of these technical achievements were completed with classes and JavaScript animations.
+- Added some extra shapes: ellipse, path, text w/ textPath
 
 Design Achievements
 ---
