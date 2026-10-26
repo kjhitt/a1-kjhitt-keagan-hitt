@@ -13,6 +13,21 @@
     }
 }
 
+.gravity {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: gravity 1s ease-in forwards;
+}
+
+@keyframes gravity {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(var(--fall));
+    }
+}
+
 body {
-    background-color: #FF7D95
+    background-color: #806E67
 }
